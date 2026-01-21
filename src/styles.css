@@ -4,7 +4,6 @@
 }
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -21,12 +20,16 @@ body.black {
 }
 
 p {
+    position: absolute;
     font-size: 30px;
+    text-shadow: white 2px 2px 2px;
 }
 
 button {
+    position: absolute;
     width: 30%;
     font-size: 30px;
+    margin-top: 100px;
 }
 
 .board {
