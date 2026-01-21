@@ -29,7 +29,7 @@ function addPiece(cell, color, row, col) {
     piece.classList.add("piece", color);
     piece.dataset.color = color;
     piece.dataset.col = col;
-    piece.dataset.row = row;g
+    piece.dataset.row = row;
     cell.appendChild(piece);
 }
 
