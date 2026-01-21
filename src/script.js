@@ -29,10 +29,9 @@ function addPiece(cell, color, row, col) {
     piece.classList.add("piece", color);
     piece.dataset.color = color;
     piece.dataset.col = col;
-    piece.dataset.row = row;
+    piece.dataset.row = row;g
     cell.appendChild(piece);
 }
-
 
 
 let currentColor;
