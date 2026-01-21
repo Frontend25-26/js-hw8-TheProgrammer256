@@ -11,6 +11,27 @@ body {
     background-color: #f0f0f0;
 }
 
+body.white {
+    background-color: #f0f0f0;
+}
+
+body.black {
+    background-color: #999999;
+}
+
+p {
+    position: absolute;
+    font-size: 30px;
+    text-shadow: white 2px 2px 2px;
+}
+
+button {
+    position: absolute;
+    width: 30%;
+    font-size: 30px;
+    margin-top: 100px;
+}
+
 .board {
     width: 50%;
     aspect-ratio: 1;
@@ -44,6 +65,10 @@ body {
     background: #b58863;
 }
 
+.cell.highlighted {
+    opacity: 70%;
+}
+
 .piece {
     width: 5%;
     aspect-ratio: 1;
@@ -52,8 +77,10 @@ body {
     box-shadow: 2px 2px 2px #000;
     cursor: pointer;
     position: absolute;
-    margin-left: var(--ml, 0);
-    margin-bottom: var(--mb, 0);
+    margin-left: 0;
+    margin-bottom: 0;
+    transition: margin-left 0.5s ease-out,
+                margin-bottom 0.5s ease-out;
 }
 
 .piece.white {
@@ -61,6 +88,24 @@ body {
 }
 .piece.black {
     background: #272727;
+}
+
+.piece.king {
+    background-image: url("media/crown.png");
+    background-size: contain;
+}
+
+.piece.deleted {
+    animation: pop;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pop {
+    to {
+        opacity: 0;
+        transform: scale(500%);
+    }
 }
 
 
